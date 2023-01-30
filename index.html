@@ -1,0 +1,533 @@
+
+<!doctype html>
+<html lang="en" class="view html5-player">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- BEGIN CUSTOM HEAD HTML -->
+    <!-- END CUSTOM HEAD HTML -->
+
+        <base id="cerosBase">
+
+        <script type="text/javascript">
+            (function () {
+                var locationWithNoQuery = document.location.href.split('?')[0].split('#')[0];
+                locationWithNoQuery = locationWithNoQuery.replace(/[><\(\)'"]/g,'');
+
+                if (document.location.pathname.match(/\.html$/)) {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/[^\/]*\.html$/, '');
+                } else {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/(\/p|\/page)\/[a-z0-9-]*\/?$/, '/');
+                }
+
+                document.getElementById('cerosBase').href = window.cerosBaseUrl;
+            })();
+        </script>
+
+
+        <script type="text/javascript" src="assets/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/webfont-1.6.3.js"></script>
+
+    <script type="text/javascript">
+        window.cerosContext = {
+        viewAssetsDomain    : '',
+            publicAssetsBaseUrl: 'assets/',
+            isEmbedded: top != window,
+            isVanityDomain: location.hostname !== 'view.ceros.com',
+            previewMode: false,
+            logging: {
+            emitDevWarnings : false,
+                modes: {
+                        'debug': false,
+                        'info': false,
+                        'warn': true,
+                        'error': true
+                }
+            },
+            usePageSlugsInNavigation: false,
+            usePreviewBanner: false,
+            useDocumentLoadingSpinner: true,
+            analyticsApplicationKey: 'player',
+            analyticsMaxDwellTime: 1800,
+            analyticsUrl: '',
+            apiVersion: 'v1',
+            revalidateWithCore: false,
+
+            ajaxCaching: true,
+        mediaDomainMap: null,
+            rollbarPlayerAccessKey: '61d7450b926c4268b5f89b75862f33a9',
+            deploymentName: 'prod',
+            appVersion: '8.3.4',
+            rollbarMaxItems: 5,
+        isExported: true,
+            isStudio: false,
+
+            openGraphUrl: '',
+            accountSlug: 'centric-consulting',
+        gracePeriodExpired  : 9007199254740991 < Date.now() / 1000,
+            appSlug: 'customer-understanding',
+            issueAliasSlug: 'landing-page-1',
+            issue: {"id":704875,"projectId":103864,"slug":"experience-636c207e45c67","name":"Customer Understanding Landing Page","status":"published","creationDate":"2022-11-09T21:49:50.000Z","lastModifiedDate":"2023-01-11T13:23:55.000Z","deletionDate":null,"firstPublishedDate":"2022-11-15T17:37:30.000Z","wipExperienceVersionId":2776703,"publishedExperienceVersionId":2891226,"createdByMemberId":17054,"primaryIssueAliasId":984037,"firstPageThumbnailUrl":"\/\/media-s3-us-east-1.ceros.com\/centric-consulting\/studio-thumbnails\/page-636c207e04de0.jpg","importLinkShared":0,"lastPublishedDate":"2023-01-11T13:24:05.000Z","lastModifiedByMemberId":19898,"lastPublishedByMemberId":19898,"passwordProtected":0,"isSSOProtected":0,"auth0UserId":null,"isTemplate":0,"templateSubtitle":null,"templateThumbnailUrl":null,"htmlLanguage":"en","lastUnpublishedDate":null,"lastUnpublishedByMemberId":null,"resourceId":"636c207e-cf6e576c19149","title":"Customer Understanding Landing Page"},
+            docVersion: {"id":2891226,"experienceId":704875,"slug":"experience-version-63beb87576ce5","loadLowRes":1,"seoNoIndex":0,"googleAnalyticsId":null,"committedJsonUrl":"http:\/\/media-s3-us-east-1.ceros.com\/centric-consulting\/doc-version-json\/v11\/experience-version-63beb87576ce5.js","themingBackgroundImageUri":null,"seoTitleKeywords":"","seoMetaKeywords":"","seoMetaDescription":"","canonicalUrlOverride":"","editorPagesManifest":[{"uri":"\/v1\/account\/centric-consulting\/pages\/page-63beb87576d17","initiallyDisabled":false,"overrides":{"mobile":{"initiallyDisabled":false}},"thumbnail":"https:\/\/media-s3-us-east-1.ceros.com\/centric-consulting\/page-thumbnails\/2023\/01\/11\/eb2dde263208d2e5b2d591857766ab42\/page-thumbnail.jpg?imageOpt=1&crop=870,489,x0,y0"}],"cdeExportUrl":null,"exportAppVersion":null,"creationDate":"2023-01-11T13:24:05.000Z","modificationDate":"2023-01-11T13:24:05.000Z","publishedDate":"2023-01-11T13:24:05.000Z","committedByMemberId":19898,"unsupportedBrowserRedirectUrl":"","ogTitle":"","ogDescription":"","ogImageUrl":null,"twitterTitle":"","twitterDescription":"","twitterImageUrl":null,"twitterHandle":"","lazyLoading":0,"tarExportUrl":null,"pageNamesInTitle":0,"mainContentLinkText":null,"textMode":"paragraph","zoomControlsEnabled":1,"requireUserConsentForAnalytics":0,"integrateWithCmp":0,"layoutSettings":{"layoutPrimarySetting":"device-type","maxTabletWidthBreakpoint":1280,"maxMobileWidthBreakpoint":800,"deviceTypeMissingVariantFallback":"desktop"},"carousel":{"enabled":0,"autoTransition":0,"autoTransitionDelay":"5"},"theming":{"arrowsEnabled":1,"swipeEnabled":0,"menuEnabled":0,"backgroundColor":"#FFFFFF","menuFgColor":"#FFFFFF","menuBgColor":"#000000","backgroundImage":null}},
+            fontManifest: {"Google|Roboto|400|normal":{"familyName":"Roboto","familyGuid":"Google|Roboto","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1536,"variantGuid":"Google|Roboto|400|normal","variantName":"Normal","cssFamilyName":"Roboto","api":"Google"},"Uploaded|0bc9b442-53eb-11ed-9a0e-1295e118baa9":{"familyName":"Muli","familyGuid":"Uploaded|09dd1697-53eb-11ed-9a0e-1295e118baa9","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1638,"variantGuid":"Uploaded|0bc9b442-53eb-11ed-9a0e-1295e118baa9","variantName":"Light","cssFamilyName":"Muli-Light-SfmTFhbX","cssFileURL":"fonts\/4e75c3dd-3b47-4c9c-9925-dc2471ab91d2\/muli-light.css","api":"Uploaded","woffFileURL":null},"Uploaded|0e1410b7-53eb-11ed-9a0e-1295e118baa9":{"familyName":"Muli","familyGuid":"Uploaded|09dd1697-53eb-11ed-9a0e-1295e118baa9","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1638,"variantGuid":"Uploaded|0e1410b7-53eb-11ed-9a0e-1295e118baa9","variantName":"Normal","cssFamilyName":"Muli-Normal-ChcRpdzu","cssFileURL":"fonts\/168f4d74-cac1-4bf5-a882-bc670929012c\/muli.css","api":"Uploaded","woffFileURL":null},"Uploaded|09dd68a3-53eb-11ed-9a0e-1295e118baa9":{"familyName":"Muli","familyGuid":"Uploaded|09dd1697-53eb-11ed-9a0e-1295e118baa9","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1638,"variantGuid":"Uploaded|09dd68a3-53eb-11ed-9a0e-1295e118baa9","variantName":"Bold","cssFamilyName":"Muli-Bold-E5toXmWs","cssFileURL":"fonts\/75c17076-cfb4-453d-a14e-1bc4880277c5\/muli-bold.css","api":"Uploaded","woffFileURL":null},"Uploaded|d3bba22c-2abf-11ed-9a0e-1295e118baa9":{"familyName":"Muli","familyGuid":"Uploaded|d3babb71-2abf-11ed-9a0e-1295e118baa9","fontWeight":400,"fontStyle":"normal","unitsPerEm":1000,"ascent":800,"variantGuid":"Uploaded|d3bba22c-2abf-11ed-9a0e-1295e118baa9","variantName":"Bold","cssFamilyName":"Muli-Bold-1fXkWK4l","cssFileURL":"fonts\/bd3994c4-0665-4136-bd3a-6fc644f11ffd\/muli-bold.css","api":"Uploaded","woffFileURL":null},"Uploaded|d40d32ce-2abf-11ed-9a0e-1295e118baa9":{"familyName":"Muli","familyGuid":"Uploaded|d3babb71-2abf-11ed-9a0e-1295e118baa9","fontWeight":400,"fontStyle":"normal","unitsPerEm":1000,"ascent":800,"variantGuid":"Uploaded|d40d32ce-2abf-11ed-9a0e-1295e118baa9","variantName":"Regular","cssFamilyName":"Muli-Regular-iAyUwcEG","cssFileURL":"fonts\/f617305e-c748-4aa7-93af-349cd2e22937\/muli-regular.css","api":"Uploaded","woffFileURL":null}},
+        whiteLabeling   : true,
+        isTrialAccount      : true,
+        allowCommerceIntegration  : false,
+        allowEmbeddedPlayerSdk    : true,
+        allowAdaptiveLayouts: true,
+            commerceSettings: {
+            panelWidth      : null,
+            panelHeight     : null,
+                productUrl: '',
+                shoppingCartUrl: '',
+            },
+                themeObj: {
+                arrowsEnabled    : true,
+                swipeEnabled     : false,
+                menuEnabled      : false,
+                    menuFgColor: '#FFFFFF',
+                    menuBgColor: '#000000',
+                    menuHoverOpacity: 0.6,
+                    backgroundColor: '#FFFFFF',
+                backgroundImage  :
+                        null
+
+                },
+            googleFontUrl: '',
+            featureFlags: {"Password Protected Experiences":false,"Getty Image Integration":true,"Getty Video Integration":true,"Accessibility":false,"(BETA) Viewer Role":false,"(BETA) Reviewer Role":false,"(BETA) Protected Preview":false,"(BETA) Enable Welcome Message for Early Access Roles":false,"Cookie Compliance":false,"Position Interactions":true,"Editor":false,"(BETA) Account Level Roles":false,"New Text Tool":false,"Studio API":false,"Global Search":false,"SSO Protected Experiences":false,"Studio Redesign":true,"Admin Redesign":true,"(New Text Tool) List And Bullets":false,"(New Text Tool) Subscript And Superscript":false,"(New Text Tool) Html Element":false,"(New Text Tool) Object States":false,"(New Text Tool) Spellcheck":false,"Editor for Creators":false},
+            analyticsTrackers: {
+                cerosPlayerTracker: {enabled: true },
+                googleAnalyticsTracker: {"enabled":true,"trackingID":"UA-34884733-1","trackPageViewsForStandaloneExperiences":true,"eventCategory":"ceros-event","trackClicks":true,"clickEventAction":"ceros-click","trackHovers":true,"hoverEventAction":"ceros-hover"},
+                googleTagManagerTracker: {"enabled":true,"containerID":"GTM-59FFWG7","trackPageViewsForStandaloneExperiences":true,"eventCategory":"ceros-event","trackClicks":true,"clickEventAction":"ceros-click","trackHovers":true,"hoverEventAction":"ceros-hover","initializeGTMForEmbeddedExperiences":false},
+                marketoTracker: {enabled: true, accountId: '061-ZGF-776' },
+                eloquaTracker: {enabled: false, siteId: '', cookieDomain: ''},
+                universalAnalyticsTracker: {enabled: false }
+            }
+        };
+    </script>
+
+    <!--
+      DISPLAY SETTINGS
+    -->
+        <meta name="viewport"
+                  content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="monitor-signature" content="monitor:player:html5"/>
+
+    <title>Customer Understanding Landing Page</title>
+
+
+
+
+    <meta property="og:title" content="Customer Understanding Landing Page"/>
+        <meta property="og:image" content="media/eb2dde263208d2e5b2d591857766ab42/page-thumbnail.jpg"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Customer Understanding Landing Page">
+    <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="media/eb2dde263208d2e5b2d591857766ab42/page-thumbnail.jpg">
+
+    <script language="Javascript" id="docversion-request-script">
+        window.docVersionRequest = window.jQuery.ajax({
+            url           : "media/experience-version-63beb87576ce5.js",
+            dataType      : 'jsonp',
+            jsonp         : false, 
+            cache         : true,  
+            jsonpCallback : "loadDocVersion_v1_account_centric_consulting_document_versions_experience_version_63beb87576ce5",
+            success       : window.jQuery.noop 
+        });
+    </script>
+
+    <!--
+      FONTS
+    -->
+
+    
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js"></script>
+        <script>
+                if (top === window) {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'UA-34884733-1', {
+                        send_page_view: false
+                    });
+                }
+        </script>
+    
+    
+    <script>
+        (function() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//munchkin.marketo.net/munchkin.js';
+            //Makerto init was moved to MarketoAnalyticsTracker.js
+            document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+    
+    </script>
+    
+
+
+
+    <script type="text/javascript">
+        window.cerosPlayerLoadStart = new Date();
+    </script>
+
+    <!--
+        Although the player itself no longer uses requirejs, users can still use requirejs with
+        the SDK. Therefore, we need to continue including it here... for now...
+    -->
+    <script
+        type="text/javascript"
+        crossorigin="anonymous"
+        src="assets/player/shared/libs/require/require-min.b03b66057d7df9b2cc9aa9c4c18aa569.js">
+    </script>
+
+    <script
+            type="text/javascript"
+            async
+            crossorigin="anonymous"
+            charset="UTF-8"
+            src="assets/player/applications/html5-player/bootstrap-optimized.20d1c681a30c5329b5e79d334ca26ce6.js">
+    </script>
+
+    <link rel="stylesheet" type="text/css"
+          href="assets/player/applications/html5-player/css/html5-player.7b6db20b43402e59c5d88bd706d74d78.css"/>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+        }
+
+        body:-ms-fullscreen::-ms-backdrop {
+            background-color: #FFFFFF;
+        }
+    </style>
+
+</head>
+<body>
+
+
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-59FFWG7"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+        if (top === window) {
+
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-59FFWG7');
+
+        }
+        </script>
+        <!-- End Google Tag Manager -->
+
+
+    <noscript>
+        
+            <div class="page"><img src="media/53d3feeaf356b6be3995028dff01915b/lesson-1-arrow-100.jpg" alt="Arrow illustration"  class="image-component"/>
+<img src="media/4cbb0fd008d595f15679467a02c7d4f6/cta-background-100.jpg" alt=""  class="image-component"/>
+<img src="media/fc46aabd912db5a04e3cff8aa1843978/ri-background-100.jpg" alt=""  class="image-component"/>
+<img src="media/f7a82e8adbb24e9dfb2c0a39b3325f1f/barriers-bg-1.png" alt=""  class="image-component"/>
+<img src="media/32efd86c0c37d5824e204e159fb5e4d8/barriers-bg.png" alt=""  class="image-component"/>
+<img src="media/57ede5332cfcbfd7fdfaad1451fb6850/intro-bg.png" alt=""  class="image-component"/>
+<img src="media/d4dd8626ea6fc2df9316d68c7ad0649a/intro-topbg.png" alt=""  class="image-component"/>
+<img src="media/91161d5aea74d626d0f50d37f7d12fa5/intro-chair.png" alt="Office chair illustration"  class="image-component"/>
+<img src="media/49a67b3939331bb115af6eb636c2987b/smileys.png" alt="Happy face and sad face illustration "  class="image-component"/>
+<img src="media/0574f3de090b5f2d8395d817a5921915/ruler.png" alt="Measuring ruler illustration"  class="image-component"/>
+<h1 class="text-component">Slide the Empty Chair Closer 
+to Understanding Your Customers
+</h1>
+<h2 class="text-component">A Guide for Gathering Research and Insights</h2>
+<p class="text-component">To better understand your customers, you must learn how to gather data and collect information about how they interact with your product or service. Then, you can interpret trends and patterns in customer behaviors.
+
+As your organization matures, it will go from gathering to using customer insights to inform direction, sliding the chair closer to creating a customer-centric organization. Below are the distinct phases involved 
+in getting to that point.</p>
+<h2 class="text-component">Slide That Chair Closer with Research & Insights</h2>
+<p class="text-component">How did Amazon evolve to become the world’s leading e-retailer? Part of the reason is the founder’s self-described obsession with customer experience. Amazon Founder Jeff Bezos is known for bringing an empty chair to meetings as a reminder not to forget the voice of your customer.
+
+ It’s imperative that organizations understand customers to better inform strategy, make decisions and engage effectively. But, to create a customer-centric organization, bringing the empty chair to meetings is just the start. You must slide it closer to your actual customer. </p>
+<h2 class="text-component">The Empty Chair 
+is Not Enough</h2>
+<img src="https://media-s3-us-east-1.ceros.com/centric-consulting/images/2022/11/11/a31e9a63234e9273c5539fbed921185f/processed-svg-arrow-icon.svg" alt=""  class="image-component"/>
+<p class="text-component">Our White Paper Teaches you How</p>
+<p class="text-component">Based on our experience, here are some of the most common challenges organizations face when striving to become customer centric.</p>
+<h2 class="text-component">Barriers to Becoming 
+Customer-Centric</h2>
+<img src="media/6e4086a9995e8c05bbdeb590cc9f086f/barriers-image.png" alt="People collaborating at work"  class="image-component"/>
+<p class="text-component">Don't let challenges prevent you from acquiring, nurturing, keeping and winning back customers.</p>
+<h3 class="text-component">Gather Research and Insights</h3>
+<p class="text-component">Lesson 1:</p>
+<p class="text-component">69%
+</p>
+<p class="text-component">of B2B customers are 
+ready to take their 
+business elsewhere. </p>
+<p class="text-component">(47%) strongly believe 
+their vendor delivers 
+on its promises.</p>
+<p class="text-component">Less than half</p>
+<h2 class="text-component">Download Full White Paper</h2>
+<p class="text-component">Close the gap between customer expectations and reality by advancing your research and insights capabilities. There are a variety of research methods available within evaluative, generative and inferred research, but knowing which to use and when can be tough.
+
+Use our white paper as your guide to understand the top 10 research methods, examples of when to use each, the steps involved, and tips to get it right.</p>
+<h3 class="text-component">3 Research Types, 10 Methods 
+for Better Insights</h3>
+<h2 class="text-component">Ready to slide that empty chair closer to your actual customer? We can help.</h2>
+<img src="media/91161d5aea74d626d0f50d37f7d12fa5/intro-chair.png" alt="Office chair illustration"  class="image-component"/>
+<h2 class="text-component">Download Full White Paper</h2>
+<h2 class="text-component">Contact Us</h2>
+<p class="text-component">and overdependence on tribal knowledge or anecdotal evidence 
+in decision-making processes</p>
+<img src="https://media-s3-us-east-1.ceros.com/centric-consulting/images/2022/11/01/2e6be66c58835984fe0fa6a3b8053f80/x-icon.svg" alt=""  class="image-component"/>
+<img src="https://media-s3-us-east-1.ceros.com/centric-consulting/images/2022/11/01/2e6be66c58835984fe0fa6a3b8053f80/x-icon.svg" alt=""  class="image-component"/>
+<img src="https://media-s3-us-east-1.ceros.com/centric-consulting/images/2022/11/01/2e6be66c58835984fe0fa6a3b8053f80/x-icon.svg" alt=""  class="image-component"/>
+<p class="text-component"></p>
+<p class="text-component">DOWNLOAD 
+WHITE PAPER</p>
+<p class="text-component">DOWNLOAD 
+WHITE PAPER</p>
+<p class="text-component">DOWNLOAD 
+WHITE PAPER</p>
+<p class="text-component">Lesson 4.</p>
+<p class="text-component">Lesson 3. </p>
+<p class="text-component">Lesson 2. </p>
+<p class="text-component">Lesson 1.</p>
+<img src="media/d35ab8758c3adb48847484be231eab83/slide-chair.png" alt=""  class="image-component"/>
+<p class="text-component">Determine which data and insights should be used to improve customer outcomes. Monetize new data elements, which in turn creates more new data to leverage.</p>
+<p class="text-component">Activate</p>
+<p class="text-component">Socialize insights across the organization to create a shared vision and information set. Create commonality with the data and information teams use to make decisions and inform each other.</p>
+<p class="text-component">Distribute</p>
+<p class="text-component">Get formal training in insights to make sense of raw data, transforming that into useful pieces of information. Gain actionable information to use every day.</p>
+<p class="text-component">Interpret</p>
+<p class="text-component">Collect raw information to be used as insights for decisions. Gain new data to monetize it.</p>
+<p class="text-component">GATHER</p>
+<p class="text-component">Generative Research</p>
+<p class="text-component">Evaluative Research </p>
+<p class="text-component">This research approach is conducted by mining existing owned and third-party data to better inform a specific problem or challenge, or to further grasp customer influences. Key types of analytics include descriptive, diagnostic, predictive and prescriptive. </p>
+<p class="text-component">With this approach, researchers seek to gain a deeper understanding of the inner workings and surrounding influences of people regarding market conditions, consumer and customer needs, and products and services. Generative research could include participatory design, contextual inquiry, a market study, or ethnography. </p>
+<p class="text-component">This type of research is a systematic approach to learning about and determining a solution for a specific need, problem, challenge or opportunity. Examples include conducting a usability study, heuristic evaluation, in-depth interviews, customer journey mapping, a cognitive walkthrough and observation as a participant. </p>
+<img src="media/ed6ae398d4b6380c3e1ff9df10bfbf06/barriers-line.png" alt=""  class="image-component"/>
+<img src="media/0e301bf1adbc73c50e9781a822746d7e/bottom-cta-line.png" alt=""  class="image-component"/>
+<img src="media/736d2c5df071faecb3a811684e0bfb60/empty-chair-circle.png" alt=""  class="image-component"/>
+<img src="media/41b39608160a93f8cdf922df30ed7639/research-circle.png" alt=""  class="image-component"/>
+<img src="media/a00ff995104d08d7bf956d7ac1036545/research-insights-circle.png" alt=""  class="image-component"/>
+<p class="text-component">Inferred Research</p>
+<img src="media/736d2c5df071faecb3a811684e0bfb60/empty-chair-circle.png" alt=""  class="image-component"/>
+<img src="https://media-s3-us-east-1.ceros.com/centric-consulting/images/2022/11/13/b6808a7f9de266fde52a5c551c7d2680/processed-svg-arrow-icon.svg" alt=""  class="image-component"/>
+<p class="text-component">Read full white paper for more detail</p>
+<p class="text-component">DOWNLOAD 
+WHITE PAPER</p>
+<img src="https://media-s3-us-east-1.ceros.com/centric-consulting/images/2022/11/01/2e6be66c58835984fe0fa6a3b8053f80/x-icon.svg" alt=""  class="image-component"/>
+<img src="media/25489d66d7c74c947b49f6d989b7fa5f/shutterstock-1922459726.jpg" alt="woman on conducting interview"  class="image-component"/>
+<img src="media/da7af4edf26db15417e983607015aa28/shutterstock-1756059539.jpg" alt="man on laptop"  class="image-component"/>
+<img src="media/c8f4fd8852635714a26b66883ae63f1a/shutterstock-2093260501.jpg" alt="woman in deep thought"  class="image-component"/>
+<img src="https://media-s3-us-east-1.ceros.com/centric-consulting/images/2022/11/13/f609d96899a7e225aba97071d1c90397/processed-svg-arrows-icon.svg" alt=""  class="image-component"/>
+<img src="https://media-s3-us-east-1.ceros.com/centric-consulting/images/2022/11/13/f1b7c7d8ca903d09769fc242fa58d32c/processed-svg-download-icon.svg" alt=""  class="image-component"/>
+<h3 class="text-component">Lack of data </h3>
+<h3 class="text-component">Lack of Understanding</h3>
+<h3 class="text-component">Lack of data </h3>
+<h3 class="text-component">Lack of Clarity</h3>
+<h3 class="text-component">Lack of Consistency</h3>
+<h3 class="text-component">Lack of Capabilities</h3>
+<h3 class="text-component">Lack of alignment</h3>
+<p class="text-component">and integration at the executive level around the voice of the customer (VOC) as an integral part of strategy</p>
+<h3 class="text-component">Lack of alignment</h3>
+<p class="text-component">causes heavy investment of external resources because of limited internal expertise, skill, and competency 
+across preferred methods of 
+research and insights </p>
+<h3 class="text-component">Lack of capabilities</h3>
+<p class="text-component">exists as research and insights are handled on a case-by-case basis 
+with no integration in the business architecture </p>
+<h3 class="text-component">Lack of Consistency</h3>
+<p class="text-component">on how customer centricity fits in with the organization and how to permeate the value across the enterprise</p>
+<h3 class="text-component">Lack of clarity</h3>
+<p class="text-component">about what a research and insights function does and how it works</p>
+<h3 class="text-component">Lack of Understanding</h3>
+<img src="media/736d2c5df071faecb3a811684e0bfb60/empty-chair-circle.png" alt=""  class="image-component"/>
+<img src="media/41b39608160a93f8cdf922df30ed7639/research-circle.png" alt=""  class="image-component"/>
+<img src="media/736d2c5df071faecb3a811684e0bfb60/empty-chair-circle.png" alt=""  class="image-component"/></div>
+    </noscript>
+
+
+<div id="main"></div>
+<div id="backgroundContainer"></div>
+
+
+
+    <!-- BEGIN CUSTOM HTML -->
+    <link rel='stylesheet' id='typekit-css'  href='https://use.typekit.net/mju7kpw.css?ver=6.0.1' type='text/css' media='all' />
+
+<script type='text/javascript' src='//use.fontawesome.com/832cc93df7.js?ver=6.0.1' id='font-awesome-js'></script>
+
+<style>
+.mktoForm {
+  width: 100% !important;
+}
+.mktoForm .mktoFormRow .mktoFormCol {
+  width: 100% !important;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
+  width: 100% !important;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
+ display: none !important;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel .mktoAsterix {
+  float: left;
+  font-size: 13px;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoGutter {
+  display: none !important;
+  width: 25px !important;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap input,
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap textarea {
+  font-family: Muli, sans-serif !important;
+  font-size: 12px !important;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap input .input-placeholder,
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap textarea .input-placeholder {
+  display: none;
+  font-size: 0;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap input[type="email"],
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap input[type="text"] {
+  padding: 0 5px;
+  height: 30px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  width: 100% !important;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap textarea {
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  width: 100% !important;
+  height: 180px;
+  padding: 5px;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap select {
+  width: 100% !important;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  height: 50px;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoRadioList label {
+  font-family: Muli, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoRadioList input {
+  margin-top: 9px;
+}
+.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.checkbox--field .mktoLabel {
+  width: calc(100% - 40px) !important;
+  float: right;
+}
+.mktoForm
+  .mktoFormRow
+  .mktoFormCol
+  .mktoFieldWrap.checkbox--field
+  .mktoCheckboxList {
+  width: 40px !important;
+  float: left;
+  position: relative;
+  top: 7px;
+}
+.mktoForm .mktoButtonRow .mktoButtonWrap {
+  margin-left: 100px !important;
+}
+.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton {
+  font-family: Muli, sans-serif;
+  font-weight: 700;
+  margin-top: 12px;
+  position: relative;
+  display: inline-block;
+  background: #ffb900 !important;
+  padding: 12px 40px 13px 28px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton::after {
+  content: "\f061";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  font-size: 12px;
+  top: 12px;
+  right: 16px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton::before {
+  content: "\f061";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  font-size: 12px;
+  top: 12px;
+  right: 16px;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover {
+  background: #2c1a5d !important;
+  color: #fff;
+  text-decoration: none;
+}
+.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover::before {
+  opacity: 0;
+  right: 28px;
+  transition-delay: 0.2s;
+}
+.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover::after {
+  right: 18px;
+  transition-delay: 0.2s;
+}
+.mktoForm .mktoOffset {
+      float: left !important;
+      height:0px !important;
+}
+</style>
+
+
+
+
+    <!-- END CUSTOM HTML -->
+
+        <script src="//app-ab13.marketo.com/js/forms2/js/forms2.js"></script>
+
+
+    <div id="page-transition-aria-live" class="sr-only" aria-live="assertive"></div>
+</body>
+</html>
